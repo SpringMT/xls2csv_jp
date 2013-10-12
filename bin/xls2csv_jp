@@ -16,7 +16,7 @@ binmode *STDOUT, ':encoding(utf-8)';
 
 =head1 NAME
 
-xls2csv - A script that recodes a spreadsheet's charset and saves as CSV.
+xls2csv_jp - A script that recodes a spreadsheet's charset and saves as CSV.
 
 =head1 DESCRIPTION
 
@@ -46,11 +46,11 @@ from clients that were being received in various character sets.
 The following example will convert a spreadsheet that is in the WINDOWS-1252 character set (WinLatin1)
 and save it as a csv file in the UTF-8 character set.
 
-	xls2csv -x "1252spreadsheet.xls" -b WINDOWS-1252 -c "ut8csvfile.csv" -a UTF-8
+	xls2csv_jp -x "1252spreadsheet.xls" -b WINDOWS-1252 -c "ut8csvfile.csv" -a UTF-8
 
 This example with convert the worksheet named "Users" in the given spreadsheet.
 
-	xls2csv -x "multi_worksheet_spreadsheet.xls" -w "Users" -c "users.csv" 
+	xls2csv_jp -x "multi_worksheet_spreadsheet.xls" -w "Users" -c "users.csv" 
 
 =head1 NOTES
 
@@ -232,13 +232,11 @@ sub VERSION_MESSAGE
 {
 	print << "EOF";
 
-This is xls2csv version $VERSION
-
-Copyright (C) 2005-2012 Ken Prows. All rights reserved.
+This is xls2csv_jp version $VERSION
 
 This script is free software; you can redistribute it and\\or modify it under the same terms as Perl itself.
 
-For help, use "xls2csv -h"
+For help, use "xls2csv_jp -h"
 
 EOF
 	exit;
@@ -248,9 +246,9 @@ sub HELP_MESSAGE
 {
 	print << "EOF";
 
-xls2csv - Recode a spreadsheet's charset and save as CSV.
+xls2csv_jp - Recode a spreadsheet's charset and save as CSV.
 
-usage: xls2csv -x spreadsheet.xls [-w worksheet] [-n worksheet number] [-b charset] [-c csvfile.csv] [-a charset] [-qshvWf]
+usage: xls2csv_jp -x spreadsheet.xls [-w worksheet] [-n worksheet number] [-b charset] [-c csvfile.csv] [-a charset] [-qshvWf]
 
 -x  : filename of the source spreadsheet
 -b  : the character set the source spreadsheet is in (before)
@@ -265,9 +263,9 @@ usage: xls2csv -x spreadsheet.xls [-w worksheet] [-n worksheet number] [-b chars
 -n  : specify the worksheet number to convert (you cannot use this option with -w)
 -f  : force the worsheet to be fully parsed. This disables the feature that skips rows when the first cell is blank
 
-example: xls2csv -x "spreadsheet.xls" -b WINDOWS-1252 -c "csvfile.csv" -a UTF-8
+example: xls2csv_jp -x "spreadsheet.xls" -b WINDOWS-1252 -c "csvfile.csv" -a UTF-8
 
-More detailed help is in "perldoc xls2csv"
+More detailed help is in "perldoc xls2csv_jp"
 
 EOF
 	exit;
