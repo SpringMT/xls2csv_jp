@@ -4,7 +4,7 @@
       "haruyama-makoto <makoto.haruyama@dena.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.6.6, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Minilla/v0.11.0, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -21,7 +21,8 @@
          "share",
          "eg",
          "examples",
-         "author"
+         "author",
+         "builder"
       ]
    },
    "prereqs" : {
@@ -57,5 +58,15 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/SpringMT/xls2csv_jp/issues"
+      },
+      "homepage" : "https://github.com/SpringMT/xls2csv_jp",
+      "repository" : {
+         "url" : "https://github.com/SpringMT/xls2csv_jp.git",
+         "web" : "https://github.com/SpringMT/xls2csv_jp"
+      }
+   },
    "version" : "0.01"
 }
